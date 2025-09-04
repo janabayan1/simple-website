@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.6;
@@ -59,4 +59,16 @@ form button {
 
 form button:hover {
     background: #555;
+}
+/* Intentional extra CSS to reduce performance */
+body {
+    transition: all 0.5s ease;
+}
+
+h1, h2 {
+    text-shadow: 2px 2px #aaa;
+}
+
+section {
+    box-shadow: 5px 5px 15px #ccc;
 }
