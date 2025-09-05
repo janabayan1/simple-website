@@ -3,17 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A simple website for SEO testing with room for optimization">
+    <meta name="description" content="A simple website for SEO testing, optimized for performance">
     <title>My Simple Website</title>
 
-    <!-- Multiple fonts (intentional) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700;900&family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- Only one optimized font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
-    <!-- Extra CSS to simulate render-blocking -->
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="extra.css">
+    <!-- Critical CSS inlined for above-the-fold content -->
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+        section {
+            padding: 2rem;
+            margin: 1rem;
+            background: #fff;
+            border-radius: 10px;
+        }
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background: #333;
+            color: #fff;
+        }
+        form input, form textarea {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        form button {
+            padding: 10px 20px;
+            background: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        form button:hover {
+            background: #555;
+        }
+        /* Responsive nav */
+        @media screen and (max-width: 600px) {
+            nav ul li {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -29,16 +87,15 @@
 
     <section id="home">
         <h2>Home</h2>
-        <p>This is a simple website to practice SEO strategies. Currently it is intentionally unoptimized.</p>
-        <!-- Large uncompressed image -->
-        <img src="https://via.placeholder.com/2000x1200" alt="Large Example Image">
+        <p>This website is fully optimized for speed, mobile-friendly, and SEO-ready.</p>
+        <!-- Optimized image -->
+        <img src="https://via.placeholder.com/800x480.webp" alt="Example Image" loading="lazy">
     </section>
 
     <section id="about">
         <h2>About</h2>
-        <p>This website is built using HTML, CSS, and JavaScript. It contains multiple fonts, large images, and extra scripts to reduce performance intentionally.</p>
-        <!-- Extra unoptimized image -->
-        <img src="https://via.placeholder.com/1800x1000" alt="Another Large Image">
+        <p>Built with HTML, CSS, and minimal JavaScript to achieve perfect performance scores.</p>
+        <img src="https://via.placeholder.com/600x400.webp" alt="About Image" loading="lazy">
     </section>
 
     <section id="contact">
@@ -56,8 +113,13 @@
         <p>&copy; 2025 My Simple Website</p>
     </footer>
 
-    <!-- Extra JS files to simulate render-blocking -->
-    <script src="script.js"></script>
-    <script src="extra.js"></script>
+    <!-- Minimal JS deferred -->
+    <script defer>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            document.getElementById('formMessage').innerText = "Thank you! Your message has been sent.";
+            this.reset();
+        });
+    </script>
 </body>
 </html>
