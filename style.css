@@ -60,15 +60,11 @@ form button {
 form button:hover {
     background: #555;
 }
-/* Intentional extra CSS to reduce performance */
-body {
-    transition: all 0.5s ease;
-}
 
-h1, h2 {
-    text-shadow: 2px 2px #aaa;
-}
-
-section {
-    box-shadow: 5px 5px 15px #ccc;
+/* Responsive nav */
+@media screen and (max-width: 600px) {
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
 }
